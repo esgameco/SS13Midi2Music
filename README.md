@@ -31,3 +31,5 @@ Put the key binding order for your specific instrument in the text bar at the to
 ## Contributing
 
 If you know how to dynamically set labels, please send a pull request to make the code cleaner.
+
+Also, if you have access to other instruments, please add a key binding order and what key the instrument starts on.
