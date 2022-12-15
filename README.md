@@ -12,3 +12,7 @@ Converts midi controller keys to keyboard keys for playing instruments in space 
 ## Note
 
 Add "14,8k" to the end of the note sequence to access the last 5 notes.
+
+## Contributing
+
+If you know how to dynamically set labels, please send a pull request to make the code cleaner.
