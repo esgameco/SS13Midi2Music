@@ -1,6 +1,8 @@
 # SS13Midi2Music
 
-Converts midi controller key presses to keyboard key presses for playing instruments in Space Station 13. Works in Goonstation.
+Converts midi controller key presses to keyboard key presses for playing instruments in Space Station 13.
+
+Works in Goonstation.
 
 ## Download
 
