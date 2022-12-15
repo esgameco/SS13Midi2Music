@@ -4,7 +4,7 @@ Converts midi controller keys to keyboard keys for playing instruments in space 
 
 ## Run
 
-```ahk main.ahk```
+Double click "main.ahk"
 
 - Type "fiddle" to use fiddle keys
 - Guitar not yet setup
