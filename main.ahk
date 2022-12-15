@@ -1,113 +1,112 @@
 #include AutoHotkey-Midi/Midi.ahk
 
+Global midi
+
 ; Create new Midi and open in 5 seconds
-midi := new Midi()
-midi.OpenMidiIn( 0 )
+Try {
+    midi := new Midi()
+    midi.OpenMidiIn( 0 )
+} Catch, E {
+    MsgBox, No Midi Device
+    Exit, -1
+}
 
 ; Note Map
-NULL := "0"
-
 global NoteMap := []
-NoteMap["A1"] := %NULL% ; A1
-NoteMap["B1"] := %NULL% ; B1
-NoteMap["C1"] := %NULL% ; C1
-NoteMap["D1"] := %NULL% ; D1
-NoteMap["E1"] := %NULL% ; E1
-NoteMap["F1"] := %NULL% ; F1
-NoteMap["G1"] := %NULL% ; G1
-
-NoteMap["A2"] := %NULL% ; A2
-NoteMap["B2"] := %NULL% ; B2
-NoteMap["C2"] := %NULL% ; C2
-NoteMap["D2"] := %NULL% ; D2
-NoteMap["E2"] := %NULL% ; E2
-NoteMap["F2"] := %NULL% ; F2
-NoteMap["G2"] := %NULL% ; G2
-
-NoteMap["A3"] := %NULL% ; A3
-NoteMap["B3"] := %NULL% ; B3
-NoteMap["C3"] := %NULL% ; C3
-NoteMap["D3"] := %NULL% ; D3
-NoteMap["E3"] := %NULL% ; E3
-NoteMap["F3"] := %NULL% ; F3
-NoteMap["G3"] := %NULL% ; G3
-
-NoteMap["A4"] := %NULL% ; A4
-NoteMap["B4"] := %NULL% ; B4
-NoteMap["C4"] := %NULL% ; C4
-NoteMap["D4"] := %NULL% ; D4
-NoteMap["E4"] := %NULL% ; E4
-NoteMap["F4"] := %NULL% ; F4
-NoteMap["G4"] := %NULL% ; G4
-
-NoteMap["A5"] := %NULL% ; A5
-NoteMap["B5"] := %NULL% ; B5
-NoteMap["C5"] := %NULL% ; C5
-NoteMap["D5"] := %NULL% ; D5
-NoteMap["E5"] := %NULL% ; E5
-NoteMap["F5"] := %NULL% ; F5
-NoteMap["G5"] := %NULL% ; G5
 
 ; Pick instrument
 PickInstrument() {
-    InputBox, UserInput, "Test"
+    InputBox, UserInput, Pick Instrument, Possible Choices: Guitar Fiddle Sax, False, 300, 200
     switch UserInput {
-        case "guitar": Guitar()
-        case "fiddle": Fiddle()
-        Default: MsgBox, "default"
+        case "Guitar": Guitar()
+        case "Fiddle": Fiddle()
+        case "Sax": Saxophone()
+        Default: MsgBox, "No instrument selected"; 
     }
 }
 
-; Guitar
+; Guitar - TODO: Use mouse presses to play guitar
 Guitar() {
 
 }
 
 ; Saxophone
-Saxophone() {
+Saxophone() { ; jmq2w3er5t6y7ui9o0p+14,8kzsxdc
+    NoteMap["G3"]  := "j"
+    NoteMap["G#3"] := "m"
+    NoteMap["A3"]  := "q"
+    NoteMap["A#3"] := "2"
+    NoteMap["B3"]  := "w"
 
+    NoteMap["C4"]  := "3"
+    NoteMap["C#4"] := "e"
+    NoteMap["D4"]  := "r"
+    NoteMap["D#4"] := "5"
+    NoteMap["E4"]  := "t"
+    NoteMap["F4"]  := "6"
+    NoteMap["F#4"] := "y"
+    NoteMap["G4"]  := "7"
+    NoteMap["G#4"] := "u"
+    NoteMap["A4"]  := "i"
+    NoteMap["A#4"] := "9"
+    NoteMap["B4"]  := "o"
+
+    NoteMap["C5"]  := "0"
+    NoteMap["C#5"] := "p"
+    NoteMap["D5"]  := "+"
+    NoteMap["D#5"] := "1"
+    NoteMap["E5"]  := "4"
+    NoteMap["F5"]  := ","
+    NoteMap["F#5"] := "8"
+    NoteMap["G5"]  := "k"
+    NoteMap["G#5"] := "z"
+    NoteMap["A5"]  := "s"
+    NoteMap["A#5"] := "x"
+    NoteMap["B5"]  := "d"
+
+    NoteMap["C6"]  := "c"
 }
 
 ; Fiddle
-Fiddle() {
-    NoteMap["A3"] := "z"
+Fiddle() { ; zsxdcvgbhnjmq2w3er5t6y7ui9o0p+14,8k
+    NoteMap["A3"]  := "z"
     NoteMap["A#3"] := "s"
-    NoteMap["B3"] := "x"
+    NoteMap["B3"]  := "x"
 
-    NoteMap["C4"] := "d"
+    NoteMap["C4"]  := "d"
     NoteMap["C#4"] := "c"
-    NoteMap["D4"] := "v"
+    NoteMap["D4"]  := "v"
     NoteMap["D#4"] := "g"
-    NoteMap["E4"] := "b"
-    NoteMap["F4"] := "h"
+    NoteMap["E4"]  := "b"
+    NoteMap["F4"]  := "h"
     NoteMap["F#4"] := "n"
-    NoteMap["G4"] := "j"
+    NoteMap["G4"]  := "j"
     NoteMap["G#4"] := "m"
-    NoteMap["A4"] := "q"
+    NoteMap["A4"]  := "q"
     NoteMap["A#4"] := "2"
-    NoteMap["B4"] := "w"
+    NoteMap["B4"]  := "w"
 
-    NoteMap["C5"] := "3"
+    NoteMap["C5"]  := "3"
     NoteMap["C#5"] := "e"
-    NoteMap["D5"] := "r"
+    NoteMap["D5"]  := "r"
     NoteMap["D#5"] := "5"
-    NoteMap["E5"] := "t"
-    NoteMap["F5"] := "6"
+    NoteMap["E5"]  := "t"
+    NoteMap["F5"]  := "6"
     NoteMap["F#5"] := "y"
-    NoteMap["G5"] := "7"
+    NoteMap["G5"]  := "7"
     NoteMap["G#5"] := "u"
-    NoteMap["A5"] := "i"
+    NoteMap["A5"]  := "i"
     NoteMap["A#5"] := "9"
-    NoteMap["B5"] := "o"
+    NoteMap["B5"]  := "o"
 
-    NoteMap["C6"] := "0"
+    NoteMap["C6"]  := "0"
     NoteMap["C#6"] := "p"
-    NoteMap["D6"] := "+"
+    NoteMap["D6"]  := "+"
     NoteMap["D#6"] := "1"
-    NoteMap["E6"] := "4"
-    NoteMap["F6"] := ","
+    NoteMap["E6"]  := "4"
+    NoteMap["F6"]  := ","
     NoteMap["F#6"] := "8"
-    NoteMap["G6"] := "k"
+    NoteMap["G6"]  := "k"
 }
 
 ; Starts Key
@@ -126,6 +125,18 @@ StopKey(key) {
 Gosub, Menu
 
 ; Maps midi to notes defined
+MidiNoteOnG3:
+    StartKey("G3")
+    Return
+MidiNoteOffG3:
+    StopKey("G3")
+    Return
+MidiNoteOnG#3:
+    StartKey("G#3")
+    Return
+MidiNoteOffG#3:
+    StopKey("G#3")
+    Return
 MidiNoteOnA3:
     StartKey("A3")
     Return
