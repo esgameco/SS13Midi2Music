@@ -2,7 +2,7 @@
 
 Global midi
 
-; Create new Midi and open in 5 seconds
+; Use first MIDI device found
 Try {
     midi := new Midi()
     midi.OpenMidiIn( 0 )
