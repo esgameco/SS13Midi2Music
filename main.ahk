@@ -16,11 +16,12 @@ global NoteMap := []
 
 ; Pick instrument
 PickInstrument() {
-    InputBox, UserInput, Pick Instrument, Possible Choices: Guitar Fiddle Sax, False, 300, 200
+    InputBox, UserInput, Pick Instrument, Possible Choices: Guitar Fiddle Sax Trumpet, False, 300, 200
     switch UserInput {
         case "Guitar": Guitar()
         case "Fiddle": Fiddle()
         case "Sax": Saxophone()
+        case "Trumpet": Trumpet()
         Default: MsgBox, "No instrument selected"; 
     }
 }
@@ -107,6 +108,46 @@ Fiddle() { ; zsxdcvgbhnjmq2w3er5t6y7ui9o0p+14,8k
     NoteMap["F6"]  := ","
     NoteMap["F#6"] := "8"
     NoteMap["G6"]  := "k"
+}
+
+; Trumpet
+Trumpet() { ; zsxdcvgbhnjmq2w3er5t6y7ui9o0p+14,
+    NoteMap["E4"]  := "z"
+    NoteMap["F4"]  := "s"
+    NoteMap["F#4"] := "x"
+    NoteMap["G4"]  := "d"
+    NoteMap["G#4"] := "c"
+    NoteMap["A3"]  := "v"
+    NoteMap["A#3"] := "g"
+    NoteMap["B3"]  := "b"
+
+    NoteMap["C4"]  := "h"
+    NoteMap["C#4"] := "n"
+    NoteMap["D4"]  := "j"
+    NoteMap["D#4"] := "m"
+    NoteMap["E4"]  := "q"
+    NoteMap["F4"]  := "2"
+    NoteMap["F#4"] := "w"
+    NoteMap["G4"]  := "3"
+    NoteMap["G#4"] := "e"
+    NoteMap["A4"]  := "r"
+    NoteMap["A#4"] := "5"
+    NoteMap["B4"]  := "t"
+
+    NoteMap["C5"]  := "6"
+    NoteMap["C#5"] := "y"
+    NoteMap["D5"]  := "7"
+    NoteMap["D#5"] := "u"
+    NoteMap["E5"]  := "i"
+    NoteMap["F5"]  := "9"
+    NoteMap["F#5"] := "o"
+    NoteMap["G5"]  := "0"
+    NoteMap["G#5"] := "p"
+    NoteMap["A5"]  := "+"
+    NoteMap["A#5"] := "1"
+    NoteMap["B5"]  := "4"
+
+    NoteMap["C6"]  := ","
 }
 
 ; Starts Key

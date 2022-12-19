@@ -15,6 +15,7 @@ Double click "main.ahk" or "main.exe" if you don't have AHK.
 
 - Type "Fiddle" to use fiddle keys
 - Type "Sax" to use sax keys
+- Type "Trumpet" to use trumpet keys
 - Guitar not yet setup
 
 ![PickInstrument](Assets/Images/PickInstrument.png)
@@ -25,6 +26,7 @@ Put the key binding order for your specific instrument in the text bar at the to
 
 - Fiddle: zsxdcvgbhnjmq2w3er5t6y7ui9o0p+14,8k
 - Sax: jmq2w3er5t6y7ui9o0p+14,8kzsxdc
+- Trumpet: zsxdcvgbhnjmq2w3er5t6y7ui9o0p+14,
 
 ![Fiddle](Assets/Images/Fiddle.png)
 
